@@ -10,9 +10,32 @@
 	--active-hero-button:#404BBF;
 	--portfolio-page-color:#E5E5E5;
 
+	--main-value:24px;
 	}
 
+
 /* ___________BODY STYLES____ */
+
+h1,
+h2,
+h3,
+h4,
+p {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+img{
+	display: block;
+	max-width: 100%;
+}
+
+ul,ol{
+	margin-top: 0;
+	margin-bottom: 0;
+	padding-left: 0;
+}
+
 body{
 	font-family: 'Roboto',sans-serif;
 	font-size: 16px;
@@ -20,6 +43,15 @@ body{
 	letter-spacing: 0.02em;
 	background-color: var(--doc-color);
 	color:var(--text-color)
+}
+
+.container{
+	width:1158;
+	padding-left: 15px;
+	padding-right: 15px;
+	margin-left: auto;
+	margin-right: auto;
+	outline: 1px solid tomato;
 }
 
 .list {
@@ -58,10 +90,20 @@ body{
 }
 
 /* ___________HEADER__________ */
-.header {}
+.header {
+  padding-top: var(--main-value);
+	padding-bottom: var(--main-value);
+}
+
+.header-container{
+	display: flex;
+	align-items: center;
+}
 
 .navigation {
 		color: var(--dark-color);
+
+		display: flex;
 }
 
 .logo {
@@ -71,6 +113,8 @@ body{
 	line-height: 1.33;
 	letter-spacing: 0.03em;
 	color: var(--primary-brand-color);
+
+	margin-right: 77px;
 }
 .navigation-link:hover,
 .navigation-link:focus{
@@ -88,19 +132,30 @@ body{
 }
 
 .navigation-list {
-
+display: flex;
 }
 
 .navigation-item {}
+
+.navigation-item:not(:last-child) {
+	margin-right: 40px;
+}
 
 .navigation-link {
 	color: inherit;
 	font-weight: 500;
 }
 
-.contact-list {}
+.contact-list {
+	display:flex;
+	margin-left:auto;
+}
 
 .contact-item {}
+
+.contact-item:not(:last-child) {
+	margin-right: 40px;
+}
 
 .contact-link {
 	color: var(--text-color);
@@ -110,9 +165,10 @@ body{
 .section-head{
 	font-weight: 600;
 	color: var(--dark-color);
-	text-align: center;
   font-size: 20px;
   line-height: 1.2;
+
+	margin-bottom: 8px;
 }
 
 .section-title{
@@ -121,31 +177,52 @@ body{
 	text-align: center;
 	font-size: 36px;
 	line-height: 1.1;
+
+	margin-bottom: 72px;
 }
+
+.section{
+	padding-top: 120px;
+	padding-bottom: 120px;
+}
+
 
 /* ___________HERO____________ */
 .hero {
 	font-weight: 600;
 	background-color: var(--dark-color);
+
+	padding-top: 192px;
+	padding-bottom: 192px;
 }
 
 .hero-head {
 
 	font-size: 56px;
 	line-height: 1.07;
-	text-align: center;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
 	color:var(--doc-color);
+
+  width: 492px;
+	min-height: 120px;
+	margin-bottom: 48px;
 }
 
 .hero-button {
-
+  display: block;
+	margin-left:auto;
+	margin-right:auto;
 	line-height: 1.19;
 	background: var(--primary-brand-color);
 	color: var(--doc-color);
-	width: 170px;
-	height: 50px;
+
+  padding: 16px 32px;
 	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 	border-radius: 4px;
+
+
 }
 .hero-button:hover,
 .hero-button:focus{
@@ -162,46 +239,102 @@ body{
 
 /* ___________SOFT SKILLS_____ */
 
-.soft-skills {}
+.soft-skills {
+}
 
 
-.soft-skill-list {}
+.soft-skill-list {
+	display:flex;
+	flex-wrap: wrap;
 
-.soft-skill-items {}
+	margin-left:calc(-1*var(--main-value));
+	margin-bottom:calc(-1*var(--main-value));
+
+}
+.soft-skill-items{
+	flex-basis: calc(100%/4 - var(--main-value));
+	margin-left: var(--main-value);
+	margin-bottom: var(--main-value);
+}
+
 
 .soft-skill-text {}
 
 /* ___________WHAT WE DOING___ */
 .doing {}
 
-.doing-list {}
+.doing-list {
+	display: flex;
+	flex-wrap: wrap;
 
-.doing-item {}
+	margin-left: calc(-1*var(--main-value));
+	margin-bottom:calc(-1*var(--main-value));
+}
+
+.doing-item{
+	flex-basis: calc(100%/3 - var(--main-value));
+	margin-left: var(--main-value);
+	margin-bottom: var(--main-value);
+}
+
 
 /* ___________TEAM____________ */
-.team {}
+.team {
+	background-color: var(--light-color);
+}
 
-.our-team{}
+.team-list {
+	display: flex;
+	flex-wrap: wrap;
+	
+	margin-left: calc(-1*var(--main-value));
+	margin-bottom:calc(-1*var(--main-value));
+}
 
-.team-list {}
+.team-item {
+	flex-basis: calc(100%/4 - var(--main-value));
+	margin-left: var(--main-value);
+	margin-bottom: var(--main-value);
 
-.team-item {}
+	box-shadow:
+	0px 1px 6px rgba(46, 47, 66, 0.08),
+	0px 1px 1px rgba(46, 47, 66, 0.16),
+	0px 2px 1px rgba(46, 47, 66, 0.08);
+	border-radius: 0px 0px 4px 4px;
+	padding-bottom: 68px;
+}
 
-.team-position {}
+.team-member{
+	margin-bottom: 32px;
+}
+.team-item > .section-head{
+	text-align: center;
+}
+
+
+.team-position {
+	text-align: center;
+}
 
 
 /* ___________FOOTER__________ */
 .footer {
 	background-color: var(--dark-color);
+
+	padding-top: 100px;
+	padding-bottom: 100px;
 }
 
 
 .footer-logo {
 	color: var(--light-color);
+	margin-bottom: 16px;
 }
 
+
 .footer-text {
-	color:var(--accent-color)
+	color:var(--accent-color);
+	max-width:264px;
 }
 
 /* ___________PORTFOLIO________ */
